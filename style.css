@@ -21,6 +21,14 @@ body {
   overflow-x: hidden;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
 h3 {
   font-family: Helvetica;
   font-size: 40px;
@@ -68,6 +76,10 @@ header {
   display: flex;
   align-items: center;
   gap: 8rem;
+}
+
+header img {
+  cursor: pointer;
 }
 
 nav {
@@ -582,18 +594,99 @@ body {
 
 .demo-main {
   margin-top: 8.1rem;
-
+flex-direction: column;
+align-items: center;
+gap: 6.8rem;
 }
 
 table {
-  width: 100%;
+  width: 855px;
+  border: 1px solid #f063b8;
+  border-radius: 9px;
+  padding: 3rem;
+  background-color: #f063b82a;
 }
 
-table, th, td {
-  border: 1px solid black;
+
+th,td {
+  border: 1px solid #212353;
   border-collapse: collapse;
-}
-th, td {
+  border-radius: 9px;
   padding: 10px;
   text-align: left;
+  color: #212353;
+}
+
+th {
+  background-color: #212353;
+  color: #FFFFFF;
+}
+
+td {
+  padding: 1rem;
+}
+
+.form {
+  width: 759px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  padding: 5rem 3rem;
+  border-radius: 30px;
+  box-shadow: 0px 15px 15px 0px #4b5d681a;
+}
+
+.form-heading {
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  color: #212353;
+  font-family: Avenir;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.label input {
+  height: 2.5rem;
+  border-radius: 6px;
+  outline: none;
+  border: 2px dotted #4b5d681a;
+  padding-left: 1rem;
+  transition: all 700ms;
+  background-color: transparent;
+}
+
+.label input:focus{
+  border: 2px solid #f063b8;
+  outline: none;
+}
+
+.form button {
+  background-color: #f063b8;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: ease-in-out 700ms;
+
+}
+
+.form button:hover{
+  background-color: #212353;
+}
+
+.form button:disabled {
+  background-color: #9ca2a7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1000px) {
+  .form {
+    width: 90%;
+  }
+  table {
+    width: 100%;
+  }
 }
