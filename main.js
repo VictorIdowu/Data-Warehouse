@@ -30,19 +30,36 @@ document
 
 
 // Resqust Demo btn
-document.getElementById('demo').addEventListener('click', function(e) {
+const requestDemo = function(e) {
   e.preventDefault();
 
   document.querySelector(".landing-main").classList.add("hide");
   document.querySelector(".demo-main").classList.replace("hide", "show");
-})
 
-document.getElementById('logo').addEventListener('click', function(e) {
+  document.getElementById('header').scrollIntoView({
+    behavior: 'smooth',
+  });
+}
+
+// Logo
+const home = function(e) {
   e.preventDefault();
 
   document.querySelector(".demo-main").classList.replace("show","hide");
   document.querySelector(".landing-main").classList.remove("hide");
-})
+
+  document.getElementById('header').scrollIntoView({
+    behavior: 'smooth',
+  });
+}
+
+// Switch to Items List page
+document.getElementById('demo').addEventListener('click', requestDemo)
+document.querySelector(".footer-btn2").addEventListener('click', requestDemo)
+
+// Go back to landing page
+document.getElementById('logo').addEventListener('click', home)
+document.getElementById("footer-home").addEventListener('click', home)
 
 
 

@@ -454,6 +454,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 1rem;
+  cursor: pointer;
 }
 
 .footer-address,
@@ -680,6 +681,20 @@ td {
 .form button:disabled {
   background-color: #9ca2a7;
   cursor: not-allowed;
+}
+
+.empty {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #212353;
+  font-weight: 600;
+  font-family: Avenir;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @media (max-width: 1000px) {

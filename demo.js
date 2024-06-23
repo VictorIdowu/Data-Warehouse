@@ -25,17 +25,25 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTable();
         itemForm.reset();
         submitButton.disabled = true;
+
+        document.getElementById('dataTable').scrollIntoView({
+            behavior: 'smooth',
+          });
     });
 
     function updateTable() {
         // Clear the existing table
         dataTable.innerHTML = '';
         // Populate the table with data from localStorage
-        items.forEach(item => {
-            const row = dataTable.insertRow();
-            row.insertCell(0).textContent = item.id;
-            row.insertCell(1).textContent = item.name;
-            row.insertCell(2).textContent = item.price;
-        });
+        if (items.length > 0) {
+
+            items.forEach(item => {
+                const row = dataTable.insertRow();
+                row.insertCell(0).textContent = item.id;
+                row.insertCell(1).textContent = item.name;
+                row.insertCell(2).textContent = item.price;
+            });
+        }
+        else dataTable.innerHTML = `<div class="empty">You have no items. You can add items below</div>`
     }
 });
