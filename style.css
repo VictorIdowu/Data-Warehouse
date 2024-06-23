@@ -576,3 +576,24 @@ body {
     gap: 2rem;
   }
 }
+
+
+/* ////// DEMO PAGE ////// */
+
+.demo-main {
+  margin-top: 8.1rem;
+
+}
+
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}

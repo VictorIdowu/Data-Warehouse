@@ -1,5 +1,130 @@
 import './style.css';
 
+
+document.getElementById('header').innerHTML = `
+<img src='/Logo.svg' alt='Logo' >
+<nav>
+  <div class="nav-items">
+    <a class="active" id="about-nav" href='#about'>About</a>
+    <a id="help-nav" href='#help'>Help</a>
+    <a id="features-nav" href='#features'>Features</a>
+    <a href='#'>Signup</a>
+  </div>
+  <button id="demo" class="btn header-btn">
+    Resquest Demo
+    <img src="/arrow-right.svg" alt="arrow right">
+  </button>
+</nav>
+`;
+
+document.getElementById('footer').innerHTML = `
+<div class="container">
+<div class="footer-top">
+  <aside>
+    <h3>Try for free!</h3>
+    <p class="text">Get limited 1 week free try our features!</p>
+  </aside>
+  <aside>
+    <button class="btn footer-btn">Learn more</button>
+    <button class="btn footer-btn2">Request Demo <img src="/arrow-right.svg" alt="arrow right"></button>
+  </aside>
+</div>
+<div class="footer-details">
+  <aside class="footer-address">
+    <h5>
+      <img src='/Logo.svg' alt='Logo' >
+      DataWareHouse
+    </h5>
+    <div class="footer-list">
+      <p>Warehouse Society, 234 
+      </br>Bahagia Ave Street PRBW 29281
+      </p>
+      <span>
+        <a href="mailto:info@warehouse.project">info@warehouse.project
+        </a>
+      </br>
+        <a href="tel:1-232-3434">1-232-3434 (Main)</a>
+      </span>
+    </div>
+  </aside>
+  <aside class="footer-about">
+    <h5>About</h5>
+    <div class="footer-list">
+      <p>Profile</p>
+      <p>Features</p>
+      <p>Careers</p>
+      <p>DW News</p>
+    </div>
+  </aside>
+  <aside id="help" class="footer-help">
+    <h5>Help</h5>
+    <div class="footer-list">
+    <p>Support</p>
+    <p>Sign up</p>
+    <p>Guide</p>
+    <p>Reports</p>
+    <p>Q&A</p>
+  </div>
+  </aside>
+  <aside class="footer-socials">
+    <h5>Social Media</h5>
+    <div>
+      <div class="social">
+        <img src='/fb.svg' alt=''>
+      </div>
+      <div class="social">
+        <img src='/twitter.svg' alt=''>
+      </div>
+      <div class="social">
+        <img src='/IG.svg' alt=''>
+      </div>
+    </div>
+  </aside>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© Datawarehouse™, 2020. All rights reserved.</br>Company Registration Number: 21479524.</p>
+<div class="chat">
+  <img src='/chat.svg' alt=''>
+</div>
+</div>
+</div>
+`;
+
+
+
+  document
+  .getElementById('about-nav')
+  .addEventListener('click', function (event) {
+    event.preventDefault();
+    document.getElementById('about').scrollIntoView({
+      behavior: 'smooth',
+    });
+  });
+
+  document
+  .getElementById('features-nav')
+  .addEventListener('click', function (event) {
+    event.preventDefault();
+    document.getElementById('features').scrollIntoView({
+      behavior: 'smooth',
+    });
+  });
+document
+  .getElementById('help-nav')
+  .addEventListener('click', function (event) {
+    event.preventDefault();
+    document.getElementById('help').scrollIntoView({
+      behavior: 'smooth',
+    });
+  });
+
+document.getElementById('demo').addEventListener('click', function(e) {
+  e.preventDefault()
+  // console.log("kkk")
+  window.location.href = '/demo';
+})
+
+
 const data = [
   {
     text: 'Search Data',
@@ -57,28 +182,3 @@ data.forEach((item) => {
   container.appendChild(div);
 });
 
-document
-  .getElementById('about-nav')
-  .addEventListener('click', function (event) {
-    event.preventDefault();
-    document.getElementById('about').scrollIntoView({
-      behavior: 'smooth',
-    });
-  });
-
-document
-  .getElementById('features-nav')
-  .addEventListener('click', function (event) {
-    event.preventDefault();
-    document.getElementById('features').scrollIntoView({
-      behavior: 'smooth',
-    });
-  });
-document
-  .getElementById('help-nav')
-  .addEventListener('click', function (event) {
-    event.preventDefault();
-    document.getElementById('help').scrollIntoView({
-      behavior: 'smooth',
-    });
-  });
